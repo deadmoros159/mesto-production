@@ -22,19 +22,9 @@ const checkInputValidity = (formElement, inputElement, config) => {
         config
       );
     } else if (inputElement.validity.valueMissing) {
-      showInputError(
-        formElement,
-        inputElement,
-        "Вы пропустили это поле",
-        config
-      );
+      showInputError(formElement, inputElement, "Вы пропустили это поле", config);
     } else if (inputElement.validity.typeMismatch) {
-      showInputError(
-        formElement,
-        inputElement,
-        "Введите адрес сайта",
-        config
-      );
+      showInputError(formElement, inputElement, "Введите адрес сайта", config);
     } else if (inputElement.validity.tooShort) {
       showInputError(
         formElement,
@@ -81,9 +71,7 @@ const setEventListeners = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector)
   );
-  const buttonElement = formElement.querySelector(
-    config.submitButtonSelector
-  );
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement, config);
 
@@ -106,9 +94,7 @@ export const clearValidation = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector)
   );
-  const buttonElement = formElement.querySelector(
-    config.submitButtonSelector
-  );
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
 
   inputList.forEach((inputElement) => {
     hideInputError(formElement, inputElement, config);
