@@ -10,4 +10,4 @@ https://deadmoros159.github.io/mesto-production/
 
 Установка зависимостей: npm install
 Сборка: npm run build
-Публикация на GitHub Pages: npm run deploy
+Публикация на GitHub Pages: npm run deploy.
